@@ -27,7 +27,6 @@ public class Day7Assignment1 {
 
                 int result = playDay();
                 totalMoney += result;
-
                 if (result > 0) {
                     winDays++;
                 } else {
