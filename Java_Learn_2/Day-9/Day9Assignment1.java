@@ -42,7 +42,6 @@ public class Day9Assignment1 {
                 return;
             }
         }
-
         System.out.println("Contact not found!");
     }
 

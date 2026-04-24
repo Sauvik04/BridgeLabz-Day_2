@@ -6,7 +6,6 @@ class EmployeeWage {
     static final int MAX_DAYS = 20;
     static final int MAX_HOURS = 100;
     public int computeWage() {
-
         int totalHours = 0;
         int totalDays = 0;
         int totalWage = 0;
