@@ -1,6 +1,4 @@
 import java.util.*;
-
-// Con Class (UC1)
 class Con{
     String firstName, lastName, address, city, state, email;
     int zip;
@@ -23,13 +21,10 @@ class Con{
                 city + ", " + state + ", " + zip + ", " + phone + ", " + email);
     }
 }
-
-// AddressBook Class (UC2–UC5)
 class AddressBook {
     ArrayList<Con> contacts = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-    // Add Con (UC2)
     public void addContact() {
         System.out.println("Enter First Name:");
         String first = sc.next();
@@ -47,19 +42,15 @@ class AddressBook {
         long phone = sc.nextLong();
         System.out.println("Enter Email:");
         String email = sc.next();
-
         contacts.add(new Con(first, last, address, city, state, zip, phone, email));
         System.out.println("Con Added!");
     }
-
-    // Display Contacts
     public void displayContacts() {
         for (Con c : contacts) {
             c.display();
         }
     }
 
-    // Edit Con (UC3)
     public void editContact(String name) {
         for (Con c : contacts) {
             if (c.firstName.equals(name)) {
@@ -73,8 +64,6 @@ class AddressBook {
         }
         System.out.println("Con Not Found!");
     }
-
-    // Delete Con (UC4)
     public void deleteContact(String name) {
         contacts.removeIf(c -> c.firstName.equals(name));
         System.out.println("Con Deleted (if existed)");
@@ -85,10 +74,7 @@ public class Day10Assignment1{
     public static void main(String[] args) {
 
         System.out.println("Welcome to Address Book Program");
-
         Scanner sc = new Scanner(System.in);
-
-        // UC6 → Multiple Address Books using HashMap
         HashMap<String, AddressBook> addressBooks = new HashMap<>();
 
         while (true) {
@@ -117,8 +103,6 @@ public class Day10Assignment1{
                         System.out.println("Not Found!");
                         break;
                     }
-
-                    // Inside selected address book
                     while (true) {
                         System.out.println("\n1.Add 2.Display 3.Edit 4.Delete 5.Back");
                         int op = sc.nextInt();
