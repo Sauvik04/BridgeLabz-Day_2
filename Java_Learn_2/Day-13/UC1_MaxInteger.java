@@ -8,7 +8,6 @@ class UC1_MaxInteger {
         return max;
     }
     public static void main(String[] args) {
-
         System.out.println("Max: " + testMaximum(10, 20, 15));
         System.out.println("Max: " + testMaximum(30, 20, 10));
         System.out.println("Max: " + testMaximum(10, 40, 20));
