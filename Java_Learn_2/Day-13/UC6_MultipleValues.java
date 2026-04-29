@@ -7,6 +7,6 @@ class UC6_MultipleValues {
     }
     public static void main(String[] args) {
         System.out.println("Max: " + testMaximum(10, 20, 5, 40, 15));
-        System.out.println("Max: " + testMaximum("Cat", "Dog", "Elephant", "Bee","Aandu"));
+        System.out.println("Max: " + testMaximum("Cat", "Dog", "Elephant", "Bee"));
     }
 }
