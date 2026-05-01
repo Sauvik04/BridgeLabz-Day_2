@@ -100,7 +100,6 @@ public class Day14Assignment2 {
         stack.push(56);
         stack.display();
         System.out.println("Peek: " + stack.peek());
-
         while (!stack.isEmpty()) {
             System.out.println("Popped: " + stack.pop());
         }
