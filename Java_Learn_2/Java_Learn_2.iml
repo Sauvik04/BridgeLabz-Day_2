@@ -19,6 +19,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Day-15" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Day-16" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Day-19" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Day-20" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Day-21" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
