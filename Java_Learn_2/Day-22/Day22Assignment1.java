@@ -1,12 +1,11 @@
 import java.util.*;
-import java.util.stream.Collectors;
 
-class ContactPerson { // Renamed to avoid potential naming conflicts
+class ContactGuy { // Renamed to avoid potential naming conflicts
     private String firstName, lastName, address, city, state, email;
     private int zip;
     private long phoneNumber;
-    public ContactPerson(String firstName, String lastName, String address, String city,
-                         String state, int zip, long phoneNumber, String email) {
+    public ContactGuy(String firstName, String lastName, String address, String city,
+                          String state, int zip, long phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -25,8 +24,8 @@ class ContactPerson { // Renamed to avoid potential naming conflicts
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ContactPerson)) return false;
-        ContactPerson contact = (ContactPerson) o;
+        if (!(o instanceof ContactGuy)) return false;
+        ContactGuy contact = (ContactGuy) o;
         return firstName.equalsIgnoreCase(contact.firstName) &&
                 lastName.equalsIgnoreCase(contact.lastName);
     }
@@ -42,9 +41,9 @@ class ContactPerson { // Renamed to avoid potential naming conflicts
     }
 }
 class AddressBookLogic {
-    private List<ContactPerson> contactList = new ArrayList<>();
+    private List<ContactGuy> contactList = new ArrayList<>();
 
-    public void addContact(ContactPerson contact) {
+    public void addContact(ContactGuy contact) {
         if (contactList.stream().anyMatch(c -> c.equals(contact))) {
             System.out.println("Duplicate entry found.");
         } else {
@@ -52,7 +51,7 @@ class AddressBookLogic {
         }
     }
 
-    public List<ContactPerson> getContactList() {
+    public List<ContactGuy> getContactList() {
         return contactList;
     }
 
@@ -70,7 +69,7 @@ public class Day22Assignment1 {
         System.out.println("Welcome to Address Book System");
         Day22Assignment1 system = new Day22Assignment1();
         AddressBookLogic myBook = new AddressBookLogic();
-        ContactPerson person1 = new ContactPerson("John", "Doe", "Main St", "New York", "NY", 10001, 1234567890L, "john@test.com");
+        ContactGuy person1 = new ContactGuy("John", "Doe", "Main St", "New York", "NY", 10001, 1234567890L, "john@test.com");
         myBook.addContact(person1);
         System.out.println("Sorted Contacts:");
         myBook.sortByPersonName();
